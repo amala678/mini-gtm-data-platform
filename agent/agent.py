@@ -9,7 +9,7 @@ from typing import Any
 
 import duckdb
 
-DEFAULT_DB = Path(__file__).parent / "warehouse" / "data.duckdb"
+DEFAULT_DB = Path(__file__).parent.parent / "warehouse" / "data.duckdb"
 OPENAI_MODEL = "gpt-4o-mini"
 OPENAI_API_URL = "https://api.openai.com/v1/chat/completions"
 
@@ -108,7 +108,7 @@ RULES — every single one is mandatory:
    competitor, product metric, or deal stage. Under 10 words.
 7. Body: 3 short paragraphs. No filler. No "I hope this finds you well."
 8. End with one low-friction CTA — a specific question or 15-min call ask.
-9. Sign off as "Alex" (generic rep name).
+9. Sign off as "XYZ" (generic rep name).
 
 If a field is missing or null in the data, skip it — do not invent facts.
 
