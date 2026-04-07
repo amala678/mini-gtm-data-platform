@@ -4,16 +4,15 @@ This repository contains my modified version of the Mini GTM Data Platform assig
 
 ## Assignment
 
-Build an agent that, given an account or prospect identifier, pulls together relevant internal context — deal history, product usage, call intelligence, marketing engagement, and key contacts — and drafts a personalized outreach email. The agent should dynamically discover the schema, avoid hardcoding table/column names, and generate valid DuckDB SQL. Fallback queries are used if the LLM fails.
+Build an agent that, given an account or prospect identifier, pulls together relevant internal context such as deal history, product usage, call intelligence, marketing engagement, and key contacts to draft a personalized outreach email. 
 
 ## My Modifications
 
-- Rewrote the agent in a modular Python CLI (`agent.py`) for account, account ID, or prospect email.
-- Added LLM-assisted query generation using OpenAI GPT-4o-mini.
+- Added SQL query generation using OpenAI GPT-4o-mini.
 - Automatic schema discovery with `information_schema.columns` from DuckDB.
 - Fallback manual queries to ensure context can always be fetched.
 - Summarizes context in human-readable format before drafting email.
-- Drafts a personalized outreach email grounded in real GTM data — no placeholders or invented facts.
+- Drafts a personalized outreach email grounded in real GTM data.
 
 ## Possible Future Modifications
 
@@ -29,7 +28,7 @@ Build an agent that, given an account or prospect identifier, pulls together rel
 1. export OPENAI_API_KEY="YOUR_API_KEY"
 
 ### CLI Usage
-Supports three identifiers:
+
 ```bash
 --account "Account Name"
 --account-id 123
