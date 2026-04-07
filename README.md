@@ -17,8 +17,6 @@ Build an agent that, given an account or prospect identifier, pulls together rel
 
 ## Possible Future Modifications
 
-## If I Had More Time
-
 - Add a caching layer to avoid regenerating SQL and re-fetching the same account context repeatedly.
 - Use a vector database to store past account contexts, call summaries, and embeddings for better retrieval and personalization.
 - Improve LLM reliability by breaking query generation into steps.
